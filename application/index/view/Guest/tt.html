@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta http-equiv="Content-Language" content="zh-CN" />
+	<meta name="keywords" content="你我网,圈圈说,汉中,汉中圈圈,你我,如是观,心理,感情,youmew" />
+	<meta name="description" content="你我网，缘自圈圈说，记载着圈圈的生活过往，只为留住那份曾经的感动；圈圈，又名小尤，前半生执著于感情，命途多舛，故孑然一身。" />
+	<title>留言本 - _ - 你我网 </title>
+	<link rel="stylesheet" rev="stylesheet" href="__PUBLIC__/static/index/style/style.css" type="text/css" media="screen" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+	<!-- <script src="__PUBLIC__/static/index/style/common.js" type="text/javascript"></script>
+	<script src="__PUBLIC__/static/index/style/c_html_js_add.js" type="text/javascript"></script>
+	<script src="__PUBLIC__/static/index/style/custom.js" type="text/javascript"></script> -->
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js" type="text/javascript"></script>
+</head>
+<body class="single">
+<div id="divAll">
+	<div id="divPage">
+	<div id="divMiddle">
+		{include file="Public/header" /}
+		<div id="divMain">
+		<div class="post single-post cate0 auth1" id="msg">
+			<h4 class="post-date"></h4>
+			<h2 class="post-title">留言本321321</h2>
+			<div class="post-body">
+				<blockquote>
+				<p>
+					个人博客，用于记录学习笔记、工作技能、生活感悟、日记、名言警句等。
+				</p>
+				</blockquote>
+			</div>
+			<h6 class="post-footer"></h6>
+		</div>
+		
+		
+		<div class="post" id="divCommentPost">
+			<p class="posttop"><a name="comment">发表留言:</a><small><a rel="nofollow" id="cancel-reply" href="#divCommentPost" style="display:none;">取消回复</a></small></p>
+			
+			<form id="frmSumbit" target="_self" method="post" action="" >
+			<!--这里给表单起个id用于获取表单并序列化-->
+				<input type="hidden" name="pid" id="pid" value="" />
+				<p>
+					<input type="text" name="nickname" id="nickname" class="text" value="" size="28" tabindex="1" /> 
+					<label for="nickname">名称（必填）</label>
+				</p>
+				<p>
+					<input type="text" name="email" id="email" class="text" value="" size="28" tabindex="2" /> 
+					<label for="email">邮箱</label>
+				</p>
+				<p>
+					<input type="text" name="homepage" id="homepage" class="text" value="" size="28" tabindex="3" /> 
+					<label for="homepage">网站链接</label>
+				</p>
+				<p><label for="content">正文（必填）(留言最长字数:1000)</label></p>
+				<p><textarea name="content" id="content" onchange="GetActiveText(this.id);" onclick="GetActiveText(this.id);" onfocus="GetActiveText(this.id);" class="text" cols="50" rows="4" tabindex="5" ></textarea></p>
+				<p><input name="btnSumbit" type="button" tabindex="6" value="提交" onclick="ajaxPost()" id="button" class="button" /></p>
+			</form>
+			<p class="postbottom">◎欢迎参与讨论，请在这里发表您的看法、交流您的观点。</p>
+		</div>
+
+		</div>
+		<div id="divSidebar">
+			<dl class="function" id="divSearchPanel">
+			<dt class="function_t">搜索</dt>
+			<dd class="function_c">
+				<form method="post" action="{:url('Search/index')}">
+					<input type="text" name="keywords" id="edtSearch" size="12" /> 
+					<input type="submit" value="提交" id="btnPost" />
+				</form>
+			</dd>
+			</dl><dl class="function" id="divTags">
+			<dt class="function_t">按标签浏览</dt>
+			<dd class="function_c">
+				<ul><li class="tag-name tag-name-size-2"><a href="http://www.youmew.com/catalog.asp?tags=%E8%A7%89%E6%82%9F">觉悟<span class="tag-count"> (18)</span></a></li><li class="tag-name tag-name-size-3"><a href="http://www.youmew.com/catalog.asp?tags=%E4%BA%BA%E7%94%9F">人生<span class="tag-count"> (26)</span></a></li><li class="tag-name tag-name-size-2"><a href="http://www.youmew.com/catalog.asp?tags=%E6%91%84%E5%BD%B1">摄影<span class="tag-count"> (15)</span></a></li><li class="tag-name tag-name-size-2"><a href="http://www.youmew.com/catalog.asp?tags=%E7%88%B1%E6%83%85">爱情<span class="tag-count"> (11)</span></a></li><li class="tag-name tag-name-size-3"><a href="http://www.youmew.com/catalog.asp?tags=%E5%BF%83%E6%83%85">心情<span class="tag-count"> (34)</span></a></li><li class="tag-name tag-name-size-3"><a href="http://www.youmew.com/catalog.asp?tags=%E7%94%9F%E6%B4%BB">生活<span class="tag-count"> (28)</span></a></li><li class="tag-name tag-name-size-1"><a href="http://www.youmew.com/catalog.asp?tags=%E9%9F%B3%E4%B9%90">音乐<span class="tag-count"> (6)</span></a></li><li class="tag-name tag-name-size-0"><a href="http://www.youmew.com/catalog.asp?tags=%E8%A7%84%E5%88%99">规则<span class="tag-count"> (5)</span></a></li><li class="tag-name tag-name-size-0"><a href="http://www.youmew.com/catalog.asp?tags=%E5%A4%95%E9%98%B3">夕阳<span class="tag-count"> (1)</span></a></li><li class="tag-name tag-name-size-0"><a href="http://www.youmew.com/catalog.asp?tags=%E5%AF%82%E5%AF%9E">寂寞<span class="tag-count"> (3)</span></a></li><li class="tag-name tag-name-size-1"><a href="http://www.youmew.com/catalog.asp?tags=%E8%BF%87%E5%BE%80">过往<span class="tag-count"> (8)</span></a></li><li class="tag-name tag-name-size-0"><a href="http://www.youmew.com/catalog.asp?tags=%E8%A5%BF%E4%B9%A1">西乡<span class="tag-count"> (3)</span></a></li><li class="tag-name tag-name-size-1"><a href="http://www.youmew.com/catalog.asp?tags=%E5%9B%9E%E5%BF%86">回忆<span class="tag-count"> (8)</span></a></li><li class="tag-name tag-name-size-0"><a href="http://www.youmew.com/catalog.asp?tags=%E6%97%85%E8%A1%8C">旅行<span class="tag-count"> (1)</span></a></li></ul>
+			</dd>
+			</dl>
+		</div>
+		{include file="Public/footer" /}
+		<div class="clear"></div>
+	</div><div class="clear"></div>
+	</div><div class="clear"></div>
+</div>
+
+<script type="text/javascript">
+	/*function ajaxPost(){    
+		var formData = $("#frmSumbit").serialize();    
+		//serialize() 方法通过序列化表单值，创建 URL 编码文本字符串,这个是jquery提供的方法    
+		$.ajax({    
+			type:"post",    
+			url:"{:url('index/guest/add')}",    
+			data:formData,//这里data传递过去的是序列化以后的字符串
+			dataType:"JOSN",//返回参数的数据类型
+			//async:false,
+			success:function(data){ 		
+				//alert(data);
+					var json = eval("("+data+")");
+					alert(json.msg);
+				//location.href = "{:url('guest/index')}";
+			}
+			error:function(err,tt,kk) { 
+				var json = eval("("+err+")");
+
+				alert('出现错误:'+json.msg+'  状态:'+tt+'  原因:'+kk+);
+				//location.href = "{:url('guest/index')}";
+			}
+		})    
+	}*/
+	
+	//留言添加、回复操作
+	$("#button").click(function(){
+		//利用jquery的serialize()方法序列化表单
+        var formData = $("#frmSumbit").serialize();
+        $.ajax({
+			url:"{:url('index/guest/add')}",
+			data:formData,//这里data传递过去的是序列化以后的字符串
+			type:"POST",
+			dataType:"json",
+			async:true,
+			success: function(data){
+				
+				alert(data.msg);
+				window.location.reload();//刷新当前页面.				
+			}			
+		});
+    });
+	
+	//给留言的pid赋值
+	function  RevertComment(pid){
+		//var pid=$("#id").attr("value");
+		//alert(pid);
+		$("#pid").attr("value",pid);
+	}
+	
+	//将后台传回的json数据循环输出到留言列表中	
+	var jcomment={$jcomment};
+	//alert(jcomment);
+	$.each(jcomment, function(idx, obj) {
+		//$(".msg").css("background-color","red");
+		var vo=obj;
+		var lou;
+		if (typeof(vo.lou) == "undefined") { 
+			/*逻辑*/
+			lou=0;
+		}else{
+			lou=vo.lou;
+		}	
+		//alert(vo.id);
+		var msgs = (vo.level-1)*55;
+		var msgarticles = 666-(vo.level-1)*55;
+		//$(".msg").css("margin-left",msgs+"px");
+		//$(".msgarticle").css("width",msgarticles+"px");
+		//alert(level);
+		var str = '<ul class="msg" id="cmt1488" style="width:'+msgarticles+'px;margin-left:'+msgs+'px;"><input type="hidden" name="id" id="id" value="'+vo.id+'" /><li class="msgname"><img class="avatar" src="" alt="" width="32"/>&nbsp;<span class="commentname"><a href="" rel="nofollow" target="_blank">'+vo.nickname+'</a>{if condition="('+lou+' == 1)"}<span></span>{else /}<span style="float:right;">'+lou+'楼</span>{/if}</span><br/><small>&nbsp;发布于&nbsp;'+vo.time+'&nbsp;&nbsp;<span class="revertcomment" style="float:right;"><a href="#comment" onclick="RevertComment('+vo.id+')">回复该留言</a></span></small></li><li class="msgarticle" >'+vo.content+'<a style="display:none;" id="AjaxCommentEnd1488"></a></li></ul>';
+		$("#msg").after(str);
+		
+	}); 
+	
+
+</script>
+</body>
+</html>
+<!-- 2016-7-8 9:38:07 -->

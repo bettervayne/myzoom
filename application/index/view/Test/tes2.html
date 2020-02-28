@@ -1,0 +1,19 @@
+<div class="hftext">
+	<form action="__APP__/Index/addComment" method="post" role="form" >
+	<input name="article_id" type="hidden"  value="{$Article.id}" />
+	<input id="pid" type="hidden" name="pid" value="{$vo.id}"/> 
+	<div class="input-group home-from-box">
+		<span class="input-group">昵称</span>
+		<input type="text" class="input-group name1" placeholder="昵称" name="username" value="{$username}">
+	</div>
+	<div class="input-group"> 
+		<span class="input-group emotion2" id="wuheng" style="color:red;">表情</span>  
+	</div>
+	<div class="input-group">
+		<textarea style="display: inline" class="input-group comment" id="content-text2" name="comment" rows="3" placeholder="请输入评论内容"></textarea>
+	</div>
+	<div class="submit">
+		<input style="width:100px;height:35px "  class="submit-btn" type="submit" value="提交">
+	</div> 
+	</form>
+</div>

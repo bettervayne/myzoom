@@ -1,0 +1,24 @@
+{volist name="info" id="vo"}
+		
+		<ul class="msg" id="cmt1488" style="margin-left:55px;">
+			<input type="hidden" name="id" id="id" value="{$vo['id']}" />
+			<li class="msgname">
+				<img class="avatar" src="" alt="" width="32"/>&nbsp;
+				<span class="commentname">
+					<a href="" rel="nofollow" target="_blank">{$vo['nickname']}</a>
+				</span>
+				<br/>
+				<small>&nbsp;发布于&nbsp;{$vo['time']|date="Y-m-d H:i:s",###}&nbsp;&nbsp;
+					<span class="revertcomment">
+						<a href="#comment" onclick="RevertComment({$vo['id']})">回复该留言</a>					
+						<!-- <a class="hf" id="{$vo['id']} href="#" style= "cursor:pointer;">回复该留言</a> -->
+					</span>
+				</small>
+			</li>
+			<li class="msgarticle" >{$vo['content']}<!--rev1488-->
+			<a style="display:none;" id="AjaxCommentEnd1488"></a></li>
+		</ul>	
+		
+		{if condition="($vo.lou == '')"}{else /}<span style="float:right;">{$vo.lou} 楼</span>{/if}
+		{/volist}
+		
